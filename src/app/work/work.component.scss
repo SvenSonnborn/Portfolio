@@ -1,0 +1,21 @@
+
+.flex-main{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+
+
+.button-marg{
+   margin-left: 0.2rem;
+   margin-right: 0.2rem;
+}
+
+.button-row{
+   button {
+      padding: 1rem 4rem;
+      font-size: 1.2rem;
+    }
+}
+

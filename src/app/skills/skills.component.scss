@@ -1,0 +1,51 @@
+.skill-complete{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   color: white;
+}
+
+.all-skills{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 50rem;
+   margin: 0 auto;
+   flex-wrap: wrap;
+}
+
+.single-skill{
+   background-color: #fff;
+   width: 12rem;
+   height: 7.5rem;
+   margin: 2rem 1rem;
+   border-radius: 0.25rem;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+
+.single-skill-upper{
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 5rem;
+   height: 5rem;
+   top: -3rem;
+   border-radius: 50%;
+   background-color: #fff;
+   box-shadow: #63636333 0 2px 8px;
+
+   img{
+      height: 2.5rem;
+   }
+}
+
+.paragraph{
+   font-size: 1.125rem;
+   margin: 0;
+   color: black;
+}

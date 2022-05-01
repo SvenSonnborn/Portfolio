@@ -1,0 +1,37 @@
+header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 86px;
+  z-index: 1;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+
+  a {
+    color: white;
+    text-decoration: none;
+    margin-left: 32px;
+    font-weight: 600;
+
+    &:hover {
+      cursor: pointer;
+      color: #fa2759 !important;
+    }
+  }
+
+  img {
+    height: 50px;
+    cursor: pointer;
+    padding-left: 3rem;
+  }
+}
+
+.menu{
+  padding-right: 3rem;
+}

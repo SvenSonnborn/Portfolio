@@ -1,1 +1,157 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+   font-size: 18px;
+   margin: 0;
+   background-color: black;
+}
+
+
+.color-primary{
+   color: #fa2759 !important;
+}
+.color-secondary{
+   color: #2dfcd8 !important;
+}
+.color-gray{
+   color: #1a1a1a;
+}
+.color-black{
+   color: black;
+}
+.bg-black{
+   background-color: black;
+}
+.bg-gray{
+   background-color: #1a1a1a;
+}
+.prime-container {
+   margin-left: 18rem;
+   margin-right: 18rem;
+   max-width: 100%;
+}
+h1{
+   font-size: 64px;
+}
+h2{
+   font-size: 36px;
+}
+
+.button-secondary{
+   color: #2dfcd8;
+   border: solid 1px #2dfcd8;
+   background-color: transparent;
+   cursor: pointer;
+
+   &:hover{
+
+      color: white;
+      background-color: #2dfcd8;
+   }
+}
+.button-primary{
+   color: #fa2759;
+   border: solid 1px #fa2759;
+   background-color: transparent;
+   cursor: pointer;
+
+   &:hover{
+
+      color: white;
+      background-color: #fa2759;
+   }
+}
+.button-primary-active{
+   border: solid 1px #fa2759;
+   cursor: pointer;
+   color: white;
+   background-color: #fa2759;
+}
+
+.padding-top-s{
+   padding-top: 0.75rem;
+}
+
+.padding-top-m{
+   padding-top: 1.25rem;
+}
+
+.padding-top-l{
+   padding-top: 1.75rem;
+}
+
+.padding-top-xl{
+   padding-top: 2.25rem;
+}
+
+.padding-top-xxl{
+   padding-top: 6.25rem;
+}
+
+.padding-bot-s{
+   padding-bottom: 0.75rem;
+}
+
+.padding-bot-m{
+   padding-bottom: 1.25rem;
+}
+
+.padding-bot-l{
+   padding-bottom: 1.75rem;
+}
+
+.padding-bot-xl{
+   padding-bottom: 2.25rem;
+}
+
+.padding-bot-xxl{
+   padding-bottom: 6.25rem;
+}
+
+.img-overlay{
+   position: absolute;
+   z-index: 1;
+   opacity: 0;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: #ffffffbe;
+
+   &:hover{
+      opacity: 100;
+   }
+
+   button{
+      background-color: white;
+
+      &:hover{
+         background-color: #fa2759;
+      }
+   }
+}
+
+.work-pictures{
+   flex-wrap: wrap;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
+.work-pictures-single{
+   position: relative;
+   margin-right: 1rem;
+   margin-bottom: 2rem;
+   width: calc(50% - 1rem);
+
+   img{
+      width: 100%;
+   }
+
+}
+
+

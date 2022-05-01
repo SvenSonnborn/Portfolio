@@ -1,0 +1,29 @@
+<div class="prime-container flex-main">
+   <h2 style="color: white;" class="padding-top-xxl">My work</h2>
+
+   <div class="padding-top-m padding-bot-xl button-row">
+      <button id="btn1" class="button-primary button-marg button-primary-active"
+         (click)="angular=false && javascript=false && all=true">ALL</button>
+      <button id="btn2" class="button-primary button-marg" (click)="all=false && javascript=false && angular=true">
+         Angular</button>
+      <button id="btn3" class="button-primary button-marg" (click)="angular=false && all=false && javascript=true">Java
+         Script</button>
+   </div>
+
+
+   <ng-template [ngIf]="all">
+      <app-all></app-all>
+   </ng-template>
+
+   <ng-template [ngIf]="angular">
+      <app-angular></app-angular>
+   </ng-template>
+
+   <ng-template [ngIf]="javascript">
+      <app-javascript></app-javascript>
+   </ng-template>
+
+
+
+
+</div>
