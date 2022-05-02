@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutmeComponent } from './aboutme/aboutme.component';
-import { AllComponent } from './all/all.component';
 import { AngularComponent } from './angular/angular.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
@@ -21,7 +20,6 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'footer', component: FooterComponent },
   { path: '', component: HomeComponent },
-  { path: 'all', component: AllComponent},
   { path: 'angular', component: AngularComponent},
   { path: 'javascript', component: JavascriptComponent}
 ];

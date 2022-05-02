@@ -11,7 +11,6 @@ import { AboutmeComponent } from './aboutme/aboutme.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
-import { AllComponent } from './all/all.component';
 import { AngularComponent } from './angular/angular.component';
 import { JavascriptComponent } from './javascript/javascript.component';
 
@@ -26,15 +25,12 @@ import { JavascriptComponent } from './javascript/javascript.component';
     FooterComponent,
     ContactComponent,
     HomeComponent,
-    AllComponent,
     AngularComponent,
-    JavascriptComponent
+    JavascriptComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -2,17 +2,20 @@
    <h2 style="color: white;" class="padding-top-xxl">My work</h2>
 
    <div class="padding-top-m padding-bot-xl button-row">
-      <button id="btn1" class="button-primary button-marg button-primary-active"
-         (click)="angular=false && javascript=false && all=true">ALL</button>
-      <button id="btn2" class="button-primary button-marg" (click)="all=false && javascript=false && angular=true">
+      <button id="btn1" class="button-primary button-marg" (click)="angular=false; javascript=false; all=true"
+         [class.button-primary-active]="all">ALL</button>
+      <button id="btn2" class="button-primary button-marg" (click)="all=false; javascript=false; angular=true"
+         [class.button-primary-active]="angular">
          Angular</button>
-      <button id="btn3" class="button-primary button-marg" (click)="angular=false && all=false && javascript=true">Java
+      <button id="btn3" class="button-primary button-marg" (click)="angular=false; all=false; javascript=true"
+         [class.button-primary-active]="javascript">Java
          Script</button>
    </div>
 
 
    <ng-template [ngIf]="all">
-      <app-all></app-all>
+      <app-angular></app-angular>
+      <app-javascript></app-javascript>
    </ng-template>
 
    <ng-template [ngIf]="angular">
