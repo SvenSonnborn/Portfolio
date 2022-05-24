@@ -1,10 +1,10 @@
-<div class="bg-white footer-flex">
+<div class="bg-white footer-flex" [class.bottom]="active">
    <div class="footer bg-white padding-bot-l padding-top-l prime-container">
       <div>
-         <a routerlink="/imprint" href="/imprint" target="_blank" class="paragraph">Imprint</a>
+         <a [routerLink]="['./imprint']" (click)="changeActive(true)" class="paragraph">Imprint</a>
          <span> | </span>
-         <a routerlink="/imprint" target="_blank" href="/imprint" class="paragraph">Privacy</a>
-         <span> |</span>
+         <a [routerLink]="['./dataprotection']" (click)="changeActive(false)" class="paragraph">Privacy</a>
+         <span> | </span>
       </div>
       <div class="footer-img">
          <div>

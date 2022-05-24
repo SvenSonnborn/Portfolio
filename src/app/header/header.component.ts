@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { InViewPortService } from '../in-view-port.service';
 import { ViewportScroller } from '@angular/common';
-
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +10,7 @@ import { ViewportScroller } from '@angular/common';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  @Input() active: boolean = false;
 
   constructor(private viewportScroller: ViewportScroller) { }
 
@@ -25,6 +26,10 @@ export class HeaderComponent implements OnInit {
   toggleNav(event: any) {
     console.log(event);
     this.navOpened = !this.navOpened;
+  }
+
+  changeActive(index: boolean){
+    this.active = index;
   }
 
 }

@@ -15,6 +15,8 @@ import { AngularComponent } from './angular/angular.component';
 import { JavascriptComponent } from './javascript/javascript.component';
 import { InViewPortService } from './in-view-port.service';
 import { InViewDirective } from './in-view.directive';
+import { ImprintComponent } from './imprint/imprint.component';
+import { DataprotectionComponent } from './dataprotection/dataprotection.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { InViewDirective } from './in-view.directive';
     AngularComponent,
     JavascriptComponent,
     InViewDirective,
+    ImprintComponent,
+    DataprotectionComponent,
   ],
   
   imports: [BrowserModule, AppRoutingModule],

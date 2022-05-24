@@ -10,6 +10,8 @@ import { JavascriptComponent } from './javascript/javascript.component';
 import { LandingComponent } from './landing/landing.component';
 import { SkillsComponent } from './skills/skills.component';
 import { WorkComponent } from './work/work.component';
+import { DataprotectionComponent } from './dataprotection/dataprotection.component';
+import { ImprintComponent } from './imprint/imprint.component';
 
 const routes: Routes = [
   { path: 'header', component: HeaderComponent },
@@ -21,11 +23,20 @@ const routes: Routes = [
   { path: 'footer', component: FooterComponent },
   { path: '', component: HomeComponent },
   { path: 'angular', component: AngularComponent},
-  { path: 'javascript', component: JavascriptComponent}
-];
+  { path: 'javascript', component: JavascriptComponent},
+  { path: 'imprint', component: ImprintComponent},
+  { path: 'dataprotection', component: DataprotectionComponent},
 
+
+];
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled'})],
+  imports: [  RouterModule.forRoot(routes, {
+    anchorScrolling: 'enabled',
+    relativeLinkResolution: 'corrected',
+    initialNavigation: 'enabled',
+    scrollPositionRestoration: 'enabled'
+}),
+],
   exports: [RouterModule],
 })
 export class AppRoutingModule { }

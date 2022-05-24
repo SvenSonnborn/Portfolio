@@ -1,10 +1,10 @@
 <div class="flex">
       <header class="prime-container" id="head">
-            <img routerLink="/" src="assets/img/logo_white.png">
+            <img routerLink='' src="assets/img/logo_white.png">
             <div class="menu">
-                  <a (click)="onClick('')" class="color-secondary">Home</a>
-                  <a (click)="onClick('about')">About</a>
-                  <a (click)="onClick('work')">Work</a>
+                  <a (click)="onClick('')" (click)="changeActive(false)" routerLink=''class="color-secondary">Home</a>
+                  <a routerLink='' (click)="onClick('about')">About</a>
+                  <a routerLink='' (click)="onClick('work')">Work</a>
             </div>
       </header>
 </div>
