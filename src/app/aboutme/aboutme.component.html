@@ -1,52 +1,60 @@
-<div class="prime-container bg-gray padding-top-xl about-main padding-bot-xxl" id="about">
+<div class="prime-container bg-gray padding-top-xxl about-main padding-bot-xxl" id="about">
    <div class="short-about padding-top-xl padding-bot-xl">
       <div class="about-img">
          <img src="./assets/img/Sven.png">
       </div>
-      <div class="about-text">
+      <div class="about-text padding-top-xl">
          <h2 class="padding-bot-m">About me</h2>
          <p>" I'm an ambitious programmer who allways <br> strafes to manage harder chalanges <br> and learn something new "</p>
       </div>
    </div>
    <div class="splitter"></div>
-   <div class="about-longer padding-top-xl padding-bot-xl">
-      <div class="about-single-container padding-bot-m">
-         <div class="about-single-img">
+   <div class="about-longer padding-top-xl">
+      <div class="about-single-container padding-bot-m" 
+      appInView (visibilityChange)="handleViewChange($event)" #container1 
+      [class.fly-up]="inviewport.elementInViewport(container1)">
+         <div class="about-single-img" >
             <img src="./assets/img/walk-line.png">
          </div>
-         <p class="text-center">
-            <span >MY JOURNEY BEGAN</span> <br> <br>
-            <span class="lower-text"> a cutting machine operator on modern CNC turning machines, where I had to write/correct and improve CNC programms. <br>
-            I was allways most interested in writing my own programms.</span>
-         </p>
+         <div class="text-center">
+            <div class="capital">MY JOURNEY BEGAN</div>
+            <p class="lower-text">as a cutting machine operator on modern CNC turning machines, where I had to write/correct and improve CNC programms. <br>
+            I was allways most interested in writing my own programms.</p>
+            </div>
       </div>
-      <div class="about-single-container padding-bot-m">
+      <div class="about-single-container padding-bot-m"
+      appInView (visibilityChange)="handleViewChange($event)"  
+      [class.fly-up]="inviewport.elementInViewport(container2)" #container2>
          <div class="about-single-img">
             <img src="./assets/img/search-line.png">
          </div>
-         <p class="text-center">
-            <span>I WAS ALWAYS FASCINATED</span> <br> <br>
-             <span class="lower-text">by technologies and the unlimited possibilities. So starting to programm more seriously was just a matter of time. <br>
-             After a short time it was obvious that i wanted to do this for a living.</span>
-         </p>
+         <div class="text-center">
+            <div class="capital">I WAS ALWAYS FASCINATED</div>
+             <p class="lower-text">by technologies and the unlimited possibilities. So starting to programm more seriously was just a matter of time. <br>
+             After a short time it was obvious that i wanted to do this for a living.</p>
+             </div>
       </div>
-      <div class="about-single-container padding-bot-m">
+      <div class="about-single-container padding-bot-m"
+      appInView (visibilityChange)="handleViewChange($event)"
+      [class.fly-up]="inviewport.elementInViewport(container3)" #container3>
          <div class="about-single-img">
             <img src="./assets/img/heart-line.png">
          </div>
-         <p class="text-center">
-            <span>I SEARCHED</span> <br> <br>
-            <span class="lower-text">for the right way, the information and the best path for me to gain the experience to become a profressional front end developer.</span>
-         </p>
+         <div class="text-center">
+            <div class="capital">I SEARCHED</div>
+            <p class="lower-text">for the right way, the information and the best path for me to gain the experience to become a profressional front end developer.</p>
+         </div>
       </div>
-      <div class="about-single-container padding-bot-m">
+      <div class="about-single-container padding-bot-m"
+      appInView (visibilityChange)="handleViewChange($event)"
+      [class.fly-up]="inviewport.elementInViewport(container4)" #container4>
          <div class="about-single-img">
             <img src="./assets/img/goal-line.png">
          </div>
-         <p class="text-center">
-            <span>MY GOAL</span> <br> <br>
-            <span class="lower-text">to become a profressional front end developer grew more and more and with the right training I am now able to build my own projects and start my journey.</span>
-         </p>
+         <div class="text-center">
+            <div class="capital">MY GOAL</div>
+            <p class="lower-text">to become a profressional front end developer grew more and more and with the right training I am now able to build my own projects and start my journey.</p>
+         </div>
       </div>
    </div>
 

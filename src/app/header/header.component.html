@@ -1,8 +1,10 @@
-<header class="prime-container bg-black padding-top-m">
-   <img routerLink="/" src="assets/img/logo_white.png">
-   <div class="menu">
-      <a routerLink="/" class="color-secondary">Home</a>
-      <a routerLink="/aboutme">About</a>
-      <a routerLink="/work">PORTFOLIO</a>
-   </div>
-</header>
+<div class="flex">
+      <header class="prime-container" id="head">
+            <img routerLink="/" src="assets/img/logo_white.png">
+            <div class="menu">
+                  <a (click)="onClick('')" class="color-secondary">Home</a>
+                  <a (click)="onClick('about')">About</a>
+                  <a (click)="onClick('work')">Work</a>
+            </div>
+      </header>
+</div>

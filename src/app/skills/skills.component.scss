@@ -1,45 +1,96 @@
-.skill-complete{
-   display: flex;
-   align-items: center;
-   flex-direction: column;
-   color: white;
+.skill-complete {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
 }
 
-.all-skills{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 50rem;
-   margin: 0 auto;
-   flex-wrap: wrap;
+.all-skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
-.single-skill{
-   background-color: #fff;
-   width: 12rem;
-   height: 7.5rem;
-   margin: 2rem 1rem;
-   border-radius: 0.25rem;
-   position: relative;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   text-align: center;
+.single-skill {
+  background-color: #fff;
+  width: 12rem;
+  height: 7.5rem;
+  margin: 2rem 1rem;
+  border-radius: 0.25rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
 }
 
-.single-skill-upper{
-   position: absolute;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 5rem;
-   height: 5rem;
-   top: -3rem;
-   border-radius: 50%;
-   background-color: #fff;
-   box-shadow: #63636333 0 2px 8px;
+.single-skill-upper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  top: -3rem;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: #63636333 0 2px 8px;
 
-   img{
-      height: 2.5rem;
-   }
+  img {
+    height: 2.5rem;
+  }
 }
+
+.grow {
+  animation: grow 225ms ease-in-out 1 both;
+}
+
+@keyframes grow {
+  from {
+    opacity: 0;
+    transform: scaleY(0) scaleX(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1) scaleX(1);
+  }
+}
+
+.media-direction {
+  display: flex;
+  flex-direction: column;
+}
+
+.fly-in-left{
+   animation: fly-in-left 225ms ease-in-out forwards;
+}
+.fly-in-right{
+   animation: fly-in-right 225ms ease-in-out forwards;
+}
+
+.destop{
+  display: none;
+}
+
+@media only screen and (min-width: 750px){
+ .skills-tablet{
+   padding-left: 5rem;
+   padding-right: 5rem;
+   margin: 0;
+ }
+ .media-direction{
+   flex-direction: row;
+ }
+ .single-skill{
+   width: 9rem;
+ }
+}
+@media only screen and (min-width: 930px){
+  .single-skill{
+    width: 12rem;
+  }
+ }

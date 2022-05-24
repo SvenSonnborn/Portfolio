@@ -1,16 +1,50 @@
-<div class="landing-container prime-container padding-top-xxl bg-black">
+<div class="landing-container prime-container bg-black">
    <div class="landing-upper">
       <div class="left-landing">
-         <h1>Hi, <br> I'm <span class="color-primary">Sven</span> Sonnborn <br> Front End develop<span
-               class="color-secondary">e</span>r</h1>
+         <div class="profile-text" appInView (visibilityChange)="handleViewChange($event)" #profile>
+            <h1>
+               <span id="text1">
+                  <span [style.animation-delay]="getAnimationDelay1(i)" [innerHTML]="char == ' ' ? '&nbsp;' : char"
+                     [class.char]="inviewport.elementInViewport(profile)" *ngFor="let char of introText1; let i = index"
+                     class="opa0">
+                  </span>
+               </span>
+               <span id="text2">
+                  <span [style.animation-delay]="getAnimationDelay1_1(i)" [innerHTML]="char == ' ' ? '&nbsp;' : char"
+                     [class.char]="inviewport.elementInViewport(profile)"
+                     *ngFor="let char of introText1_1; let i = index" class="opa0">
+                  </span>
+               </span>
+               <span id="name">
+                  <span [style.animation-delay]="getAnimationDelay2(i)" class="color-primary opa0"
+                     [innerHTML]="char == ' ' ? '&nbsp;' : char" [class.char]="inviewport.elementInViewport(profile)"
+                     *ngFor="let char of introText2; let i = index">
+                  </span>
+               </span>
+               <span id="text3">
+                  <span [style.animation-delay]="getAnimationDelay3(i)" [innerHTML]="char == ' ' ? '&nbsp;' : char"
+                     [class.char]="inviewport.elementInViewport(profile)" *ngFor="let char of introText3; let i = index"
+                     class="opa0">
+                  </span>
+               </span>
+               <span [style.animation-delay]="getAnimationDelay4(i)" [innerHTML]="char == ' ' ? '&nbsp;' : char"
+                  [class.char]="inviewport.elementInViewport(profile)" *ngFor="let char of introText4; let i = index"
+                  class="opa0">
+               </span>
+               <span [style.animation-delay]="getAnimationDelay5(i)" [innerHTML]="char == ' ' ? '&nbsp;' : char"
+                  [class.char]="inviewport.elementInViewport(profile)" *ngFor="let char of introText5; let i = index"
+                  class="opa0">
+               </span>
+            </h1>
+         </div>
          <button class="button-secondary">Contact me</button>
       </div>
-      <div class="right-landing">
+      <div class="right-landing" [class.fly-in-right]="inviewport.elementInViewport(profile)" >
          <img src="./assets/img/Sven2.png">
       </div>
    </div>
    <div class="landing-lower">
-      <a class="pulse" href="#skills">
+      <a class="pulse" (click)="onClick('skills')">
          <img src="./assets/img/arrow-down.png" class="arrow-down">
       </a>
    </div>

@@ -8,15 +8,32 @@
 
 
 .button-marg{
-   margin-left: 0.2rem;
-   margin-right: 0.2rem;
+   margin-left: 1rem;
+   margin-right: 1rem;
 }
 
 .button-row{
+   width: 100%;
+   max-width: 1100px;
+   display: flex;
+   flex-direction: column;
    button {
       padding: 1rem 4rem;
       font-size: 1.2rem;
     }
+}
+
+@media only screen and (min-width: 750px){
+   .button-row{
+      flex-direction: row;
+      justify-content: space-between;
+
+      button{
+         width: 33%;
+         padding: 1rem 3rem;
+         margin: 0;
+      }
+   }
 }
 
 

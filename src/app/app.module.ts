@@ -13,6 +13,8 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { AngularComponent } from './angular/angular.component';
 import { JavascriptComponent } from './javascript/javascript.component';
+import { InViewPortService } from './in-view-port.service';
+import { InViewDirective } from './in-view.directive';
 
 @NgModule({
   declarations: [
@@ -27,10 +29,11 @@ import { JavascriptComponent } from './javascript/javascript.component';
     HomeComponent,
     AngularComponent,
     JavascriptComponent,
+    InViewDirective,
   ],
   
   imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  providers: [InViewPortService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
