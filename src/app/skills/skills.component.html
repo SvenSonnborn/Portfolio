@@ -2,9 +2,15 @@
    <h2 class="padding-bot-xl">MY Skills</h2>
    <div class="all-skills padding-top-xl">
       <div class="media-direction">
+         <!--
+            Create every Skill in a seperate div
+            Depending on skillsJSON skills.component.ts
+            adds the animationclass when dom is in view
+            changes visibility everytime dom is in view or not
+          -->
          <div *ngFor="let skill of skillsJSON" let i=" index" class="single-skill" appInView
-         (visibilityChange)="handleViewChange($event)" #skill1
-         [ngClass]="inviewport.elementInViewport(skill1) ? skill.class : 'opa0'">
+            (visibilityChange)="handleViewChange($event)" #skill1
+            [ngClass]="inviewport.elementInViewport(skill1) ? skill.class : 'opa0'">
             <div class="single-skill-upper">
                <img src="./assets/img/{{skill.Icon}}.png">
             </div>

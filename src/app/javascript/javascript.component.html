@@ -1,4 +1,8 @@
 <div class="work-pictures padding-top-xl">
+   <!--
+      Create every Javascript Work in a seperate div
+      Depending on javascriptprojects-array in javascript.component.ts
+   -->
    <div *ngFor="let jsproject of javascriptprojects" let i = index class="work-pictures-single">
       <img src="./assets/img/{{jsproject.img}}.jpg">
       <div class="img-overlay">

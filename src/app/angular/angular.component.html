@@ -1,5 +1,9 @@
 <div class="work-pictures padding-top-xl">
-   <div *ngFor="let project of angularprojects" let i = index class="work-pictures-single">
+   <!--
+      Create every Angular work in a seperate div
+      Depending on angularprojects-array in angular.component.ts
+   -->
+   <div *ngFor="let project of angularprojects" let i=index class="work-pictures-single">
       <img src="./assets/img/{{project.img}}.jpg">
       <div class="img-overlay">
          <h3 class="color-primary">{{project.name}}</h3>
