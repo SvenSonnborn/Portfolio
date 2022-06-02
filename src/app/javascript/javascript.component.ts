@@ -11,5 +11,16 @@ export class JavascriptComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  javascriptprojects: any[] = [
+    {
+      name: 'El pollo loco',
+      img: 'PoloLoco',
+      text: 'Object-Oriented JS game',
+    },
+    {
+      name: 'Join Project',
+      img: 'kanban',
+      text: 'Kanban board, with small backend, and drag&drop taskbar',
+    },
+  ];
 }
