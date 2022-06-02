@@ -3,13 +3,15 @@
       <div class="left-landing">
          <div class="profile-text" appInView (visibilityChange)="handleViewChange($event)" #profile>
             <h1>
-               <span id="text1">
-                  <span [style.animation-delay]="getAnimationDelay1(i)" [innerHTML]="char == ' ' ? '&nbsp;' : char"
-                     [class.char]="inviewport.elementInViewport(profile)" *ngFor="let char of introText1; let i = index"
-                     class="opa0">
+               <span [class.color-primary]="text.includes('Sven Sonnborn')" [class.color-secondary]="text[4] == 'e'" id="text1" *ngFor="let text of introText; let j = index">
+                  <span [style.animation-delay]="getAnimationDelay(i)" 
+                  [innerHTML]="char == ' ' ? '&nbsp;' : char"
+                  [class.char]="inviewport.elementInViewport(profile)" 
+                  *ngFor="let char of getArrayFromStringArray(text); let i = index"
+                  class="opa0">
                   </span>
                </span>
-               <span id="text2">
+               <!-- <span id="text2">
                   <span [style.animation-delay]="getAnimationDelay1_1(i)" [innerHTML]="char == ' ' ? '&nbsp;' : char"
                      [class.char]="inviewport.elementInViewport(profile)"
                      *ngFor="let char of introText1_1; let i = index" class="opa0">
@@ -34,7 +36,7 @@
                <span [style.animation-delay]="getAnimationDelay5(i)" [innerHTML]="char == ' ' ? '&nbsp;' : char"
                   [class.char]="inviewport.elementInViewport(profile)" *ngFor="let char of introText5; let i = index"
                   class="opa0">
-               </span>
+               </span> -->
             </h1>
          </div>
          <button class="button-secondary">Contact me</button>

@@ -1,83 +1,15 @@
 <div class="skill-complete bg-gray prime-container skills-tablet padding-top-xxl padding-bot-xxl" id="skills">
    <h2 class="padding-bot-xl">MY Skills</h2>
    <div class="all-skills padding-top-xl">
-      <div class="media-direction" >
-         <div class="single-skill" appInView (visibilityChange)="handleViewChange($event)" #skill1 [class.fly-in-left]="inviewport.elementInViewport(skill1)">
-            <div class="single-skill-upper">
-               <img src="./assets/img/java script.png">
-            </div>
-            <p class="paragraph color-black">
-               Java script
-            </p>
-         </div>
-         <div class="single-skill" appInView (visibilityChange)="handleViewChange($event)" #skill1_2 [class.grow]="inviewport.elementInViewport(skill1_2)">
-            <div class="single-skill-upper">
-               <img src="/assets/img/angular2.png">
-            </div>
-            <p class="paragraph color-black">
-               Angular
-            </p>
-         </div>
-         <div class="single-skill" appInView (visibilityChange)="handleViewChange($event)" #skill1_3 [class.fly-in-right]="inviewport.elementInViewport(skill1_3)">
-            <div class="single-skill-upper">
-               <img src="/assets/img/Group 205.png">
-            </div>
-            <p class="paragraph color-black">
-               HTML / CSS
-            </p>
-         </div>
-      </div>
-
       <div class="media-direction">
-         <div class="single-skill" appInView (visibilityChange)="handleViewChange($event)" #skill2 [class.fly-in-left]="inviewport.elementInViewport(skill2)">
+         <div *ngFor="let skill of skillsJSON" let i=" index" class="single-skill" appInView
+         (visibilityChange)="handleViewChange($event)" #skill1
+         [ngClass]="inviewport.elementInViewport(skill1) ? skill.class : 'opa0'">
             <div class="single-skill-upper">
-               <img src="/assets/img/Group 226.png">
+               <img src="./assets/img/{{skill.Icon}}.png">
             </div>
             <p class="paragraph color-black">
-               SCRUM
-            </p>
-         </div>
-         <div class="single-skill" appInView (visibilityChange)="handleViewChange($event)" #skill2_2 [class.grow]="inviewport.elementInViewport(skill2_2)">
-            <div class="single-skill-upper">
-               <img src="/assets/img/Git.png">
-            </div>
-            <p class="paragraph color-black">
-               GIT
-            </p>
-         </div>
-         <div class="single-skill" appInView (visibilityChange)="handleViewChange($event)" #skill2_3 [class.fly-in-right]="inviewport.elementInViewport(skill2_3)">
-            <div class="single-skill-upper">
-               <img src="/assets/img/Group 20.png">
-            </div>
-            <p class="paragraph color-black">
-               Design Thinking
-            </p>
-         </div>
-      </div>
-
-      <div class="media-direction">
-         <div class="single-skill" appInView (visibilityChange)="handleViewChange($event)" #skill3 [class.fly-in-left]="inviewport.elementInViewport(skill3)">
-            <div class="single-skill-upper">
-               <img src="/assets/img/API.png">
-            </div>
-            <p class="paragraph color-black">
-               Rest API
-            </p>
-         </div>
-         <div class="single-skill" appInView (visibilityChange)="handleViewChange($event)" #skill3_2 [class.grow]="inviewport.elementInViewport(skill3_2)">
-            <div class="single-skill-upper">
-               <img src="/assets/img/test.png">
-            </div>
-            <p class="paragraph color-black">
-               Test automation
-            </p>
-         </div>
-         <div class="single-skill" appInView (visibilityChange)="handleViewChange($event)" #skill3_3 [class.fly-in-right]="inviewport.elementInViewport(skill3_3)">
-            <div class="single-skill-upper">
-               <img src="/assets/img/database.png">
-            </div>
-            <p class="paragraph color-black">
-               Databases
+               {{skill.name}}
             </p>
          </div>
       </div>

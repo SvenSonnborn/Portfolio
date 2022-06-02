@@ -126,16 +126,6 @@
   white-space: pre;
 }
 
-#text2::after{
-  content: "\a";
-  white-space: pre;
-}
-
-#name::after{
-  content: "\a";
-  white-space: pre;
-}
-
 @media only screen and (max-width: 600px) and (min-height: 850px){
   .landing-container{
     padding-top: 9rem;
