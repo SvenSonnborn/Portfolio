@@ -1,4 +1,4 @@
-<div class="prime-container bg-gray padding-top-xxl about-main padding-bot-xxl" id="about">
+<div class="prime-container bg-gray padding-top-xxl about-main padding-bot-xxl padding-left padding-right" id="about">
    <div class="short-about padding-top-xl padding-bot-xl">
       <div class="about-img">
          <img src="./assets/img/Sven.png">
@@ -10,9 +10,9 @@
    </div>
    <div class="splitter"></div>
    <div class="about-longer padding-top-xl">
-      <div class="about-single-container padding-bot-m" 
-      appInView (visibilityChange)="handleViewChange($event)" #container1 
-      [class.fly-up]="inviewport.elementInViewport(container1)">
+      <div class="about-single-container padding-bot-m"
+      appInView (visibilityChange)="handleViewChange($event)" #container1
+      [class.fly-up]="inviewport.elementInViewport2(container1)">
          <div class="about-single-img" >
             <img src="./assets/img/walk-line.png">
          </div>
@@ -23,8 +23,8 @@
             </div>
       </div>
       <div class="about-single-container padding-bot-m"
-      appInView (visibilityChange)="handleViewChange($event)"  
-      [class.fly-up]="inviewport.elementInViewport(container2)" #container2>
+      appInView (visibilityChange)="handleViewChange($event)"
+      [class.fly-up]="inviewport.elementInViewport2(container2)" #container2>
          <div class="about-single-img">
             <img src="./assets/img/search-line.png">
          </div>
@@ -36,7 +36,7 @@
       </div>
       <div class="about-single-container padding-bot-m"
       appInView (visibilityChange)="handleViewChange($event)"
-      [class.fly-up]="inviewport.elementInViewport(container3)" #container3>
+      [class.fly-up]="inviewport.elementInViewport2(container3)" #container3>
          <div class="about-single-img">
             <img src="./assets/img/heart-line.png">
          </div>
@@ -47,7 +47,7 @@
       </div>
       <div class="about-single-container padding-bot-m"
       appInView (visibilityChange)="handleViewChange($event)"
-      [class.fly-up]="inviewport.elementInViewport(container4)" #container4>
+      [class.fly-up]="inviewport.elementInViewport2(container4)" #container4>
          <div class="about-single-img">
             <img src="./assets/img/goal-line.png">
          </div>

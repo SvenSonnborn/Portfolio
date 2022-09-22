@@ -10,7 +10,7 @@ export class AppComponent {
   currentRoute = '';
 
   constructor(public router: Router) {
-    
+
   }
 
 }

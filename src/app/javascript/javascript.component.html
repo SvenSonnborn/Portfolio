@@ -4,11 +4,11 @@
       Depending on javascriptprojects-array in javascript.component.ts
    -->
    <div *ngFor="let jsproject of javascriptprojects" let i = index class="work-pictures-single">
-      <img src="./assets/img/{{jsproject.img}}.jpg">
+      <img src="./assets/img/{{ jsproject.img }}.jpg">
       <div class="img-overlay">
-         <h3 class="color-primary">{{jsproject.name}}</h3>
-         <p>{{jsproject.text}}</p>
-         <a href="#">
+         <h3 class="color-primary">{{ jsproject.name }}</h3>
+         <p>{{ jsproject.text }}</p>
+         <a href="{{ jsproject.link }}" target="_blank" rel="noopener noreferrer">
             <button class="button-primary">Give it a try</button>
          </a>
       </div>

@@ -51,4 +51,8 @@ export class LandingComponent implements OnInit {
   getAnimationDelay(index: number) {
     return `${(100 * index) + (3)}ms`;
   }
+
+  openCV(){
+      window.open('./assets/CV/CV-SvenSonnborn.pdf', '_blank');
+  }
 }

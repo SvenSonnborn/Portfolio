@@ -1,27 +1,29 @@
-<div class="landing-container prime-container bg-black">
-   <div class="landing-upper">
-      <div class="left-landing">
-         <div class="profile-text" appInView (visibilityChange)="handleViewChange($event)" #profile>
-            <h1>
-               <span [class.color-primary]="text.includes('Sven Sonnborn')" [class.color-secondary]="text[4] == 'e'" id="text1" *ngFor="let text of introText; let j = index">
-                  <span [style.animation-delay]="getAnimationDelay(i)" 
-                  [innerHTML]="char == ' ' ? '&nbsp;' : char"
-                  [class.char]="inviewport.elementInViewport(profile)" 
-                  *ngFor="let char of getArrayFromStringArray(text); let i = index"
-                  class="opa0">
-                  </span>
-               </span>
-            </h1>
-         </div>
-         <button class="button-secondary">Contact me</button>
+<div class="landing-container prime-container bg-black padding-left padding-right">
+  <div class="landing-upper">
+    <div class="left-landing">
+      <div class="profile-text" appInView (visibilityChange)="handleViewChange($event)" #profile>
+        <h1>
+          <span [class.color-primary]="text.includes('Sven Sonnborn')" [class.color-secondary]="text[4] == 'e'"
+            id="text1" *ngFor="let text of introText; let j = index">
+            <span [style.animation-delay]="getAnimationDelay(i)" [innerHTML]="char == ' ' ? '&nbsp;' : char"
+              [class.char]="inviewport.elementInViewport2(profile)"
+              *ngFor="let char of getArrayFromStringArray(text); let i = index" class="opa0">
+            </span>
+          </span>
+        </h1>
       </div>
-      <div class="right-landing" [class.fly-in-right]="inviewport.elementInViewport(profile)" >
-         <img src="./assets/img/Sven2.png">
+      <div class="buttons">
+        <button routerLink='' (click)="onClick('contact')" class="button-secondary">Contact me</button>
+        <button class="button-secondary cv" (click)="openCV()">Open CV</button>
       </div>
-   </div>
-   <div class="landing-lower">
-      <a class="pulse" (click)="onClick('skills')">
-         <img src="./assets/img/arrow-down.png" class="arrow-down">
-      </a>
-   </div>
+    </div>
+    <div class="right-landing" [class.fly-in-right]="inviewport.elementInViewport2(profile)">
+      <img src="./assets/img/Sven2.png">
+    </div>
+  </div>
+  <div class="landing-lower">
+    <a class="pulse" (click)="onClick('skills')">
+      <img src="./assets/img/arrow-down.png" class="arrow-down">
+    </a>
+  </div>
 </div>

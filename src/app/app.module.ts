@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import { LandingComponent } from './landing/landing.component';
 import { SkillsComponent } from './skills/skills.component';
 import { WorkComponent } from './work/work.component';
@@ -17,11 +16,19 @@ import { InViewPortService } from './in-view-port.service';
 import { InViewDirective } from './in-view.directive';
 import { ImprintComponent } from './imprint/imprint.component';
 import { DataprotectionComponent } from './dataprotection/dataprotection.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ContactService } from './contact.service';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSidenavModule } from '@angular/material/sidenav';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     LandingComponent,
     SkillsComponent,
     WorkComponent,
@@ -34,10 +41,20 @@ import { DataprotectionComponent } from './dataprotection/dataprotection.compone
     InViewDirective,
     ImprintComponent,
     DataprotectionComponent,
+    SidebarComponent,
   ],
-  
-  imports: [BrowserModule, AppRoutingModule],
-  providers: [InViewPortService],
+
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatSidenavModule
+  ],
+  providers: [InViewPortService, ContactService
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

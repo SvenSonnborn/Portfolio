@@ -23,11 +23,13 @@ export class JavascriptComponent implements OnInit {
       name: 'El pollo loco',
       img: 'PoloLoco',
       text: 'Object-Oriented JS game',
+      link: 'https://elpolloloco.svensonnborn.com/',
     },
     {
-      name: 'Join Project',
-      img: 'kanban',
-      text: 'Kanban board, with small backend, and drag&drop taskbar',
+      name: 'Pokedex',
+      img: 'pokedex',
+      text: 'Pokedex with rested API',
+      link: 'https://pokedex.svensonnborn.com/',
     },
   ];
 }

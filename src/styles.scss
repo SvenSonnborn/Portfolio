@@ -1,6 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
   font-size: 18px;
+  font-family: inter;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/inter-v12-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('./assets/fonts/inter-v12-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./assets/fonts/inter-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./assets/fonts/inter-v12-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('./assets/fonts/inter-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./assets/fonts/inter-v12-latin-regular.svg#Inter') format('svg'); /* Legacy iOS */
 }
 
 body {
@@ -13,16 +27,22 @@ html {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 32px;
+
+  @media screen and (min-width: 600px){
+    font-size: 44px;
+  }
+  @media screen and (min-width: 900px){
+    font-size: 64px;
+  }
 }
 h2 {
-  font-size: 1.75rem;
+  font-size: 36px;
   margin: 0;
-}
 
-.paragraph {
-  font-size: 1.125rem;
-  margin: 0;
+  @media screen and (min-width: 600px){
+    font-size: 24px;
+  }
 }
 
 .color-primary {
@@ -120,6 +140,15 @@ h2 {
   padding-bottom: 6.25rem;
 }
 
+.padding-left{
+  padding-left: 9vw;
+}
+
+
+.padding-right{
+  padding-right: 9vw;
+}
+
 .img-overlay {
   position: absolute;
   z-index: 1;
@@ -157,7 +186,7 @@ h2 {
 
 .work-pictures-single {
   position: relative;
-  margin: 1rem;
+  margin: 1rem 0;
 
   img {
     width: 100%;
@@ -202,3 +231,14 @@ h2 {
     justify-content: space-between;
   }
 }
+
+@media only screen and (min-width: 1100px) {
+  .padding-left{
+    padding-left: 15vw;
+  }
+  .padding-right{
+    padding-right: 15vw;
+  }
+}
+
+

@@ -4,7 +4,6 @@ import { AboutmeComponent } from './aboutme/aboutme.component';
 import { AngularComponent } from './angular/angular.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { JavascriptComponent } from './javascript/javascript.component';
 import { LandingComponent } from './landing/landing.component';
@@ -14,7 +13,6 @@ import { DataprotectionComponent } from './dataprotection/dataprotection.compone
 import { ImprintComponent } from './imprint/imprint.component';
 
 const routes: Routes = [
-  { path: 'header', component: HeaderComponent },
   { path: 'landing', component: LandingComponent },
   { path: 'skills', component: SkillsComponent },
   { path: 'work', component: WorkComponent },

@@ -22,7 +22,7 @@
 .fly-up {
    animation: fly-up 425ms ease-in-out 1 both;
  }
- 
+
  @keyframes fly-up {
    from {
      opacity: 0;
@@ -35,19 +35,16 @@
  }
 
 .about-img{
-   height: 14rem;
-   width: 14rem;
+   height: 260px;
+   width: 260px;
    overflow: hidden;
    background-color: #fa2759;
    border-radius: 100%;
 
 
-   
-   img{
-      width: 11.5rem;
-      margin-left: 1.5rem;
-      margin-top: 0.25rem;
 
+   img{
+      width: 260px
    }
 }
 
@@ -63,7 +60,7 @@
    display: flex;
    flex-direction: column;
    align-items: center;
-   margin: 0 5%;
+   margin: 0;
    color: white;
    max-width: 1100px;
 }

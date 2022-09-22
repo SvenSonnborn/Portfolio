@@ -1,13 +1,13 @@
-<div class="prime-container flex-main paddin-top-xxl padding-bot-xxl" id="work">
+<div class="prime-container flex-main paddin-top-xxl padding-bot-xxl padding-left padding-right" id="work">
    <h2 style="color: white;" class="padding-top-xxl">My work</h2>
 
    <div class="padding-top-xl padding-bot-xl button-row">
-      <button id="btn1" class="button-primary button-marg" (click)="angular=false; javascript=false; all=true"
+      <button id="btn1" class="button-primary" (click)="angular=false; javascript=false; all=true"
          [class.button-primary-active]="all">ALL</button>
-      <button id="btn2" class="button-primary button-marg" (click)="all=false; javascript=false; angular=true"
+      <button id="btn2" class="button-primary" (click)="all=false; javascript=false; angular=true"
          [class.button-primary-active]="angular">
          Angular</button>
-      <button id="btn3" class="button-primary button-marg" (click)="angular=false; all=false; javascript=true"
+      <button id="btn3" class="button-primary" (click)="angular=false; all=false; javascript=true"
          [class.button-primary-active]="javascript">Java
          Script</button>
    </div>

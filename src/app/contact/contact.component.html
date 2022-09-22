@@ -1,22 +1,27 @@
-<div class="prime-container padding-top-xxl padding-bot-xxl contact-container" id="contact">
-      <h1 class="color-secondary">Contact me.</h1>
-      <p class="color-white center">Get in touch via the form below or by emailing
-         <span class="color-secondary">sven.sonnborn@web.de</span>
-      </p>
-      <form action="/assets/send_mail/send_mail.pvp" name="form" method="post" required>
-         <div class="form-container">
-            <label for="name" class="padding-bot-s paragraph">Name</label>
-            <input required type="text" placeholder="Enter your name" name="name" id="name"
-               class="bg-gray paragraph color-white">
-            <label for="email" class="padding-bot-s padding-top-s paragraph">Email adress</label>
-            <input required type="email" placeholder="Enter your Email address" name="email" id="email"
-               class="bg-gray paragraph color-white">
-            <label for="text" class="padding-bot-s padding-top-s paragraph">Message</label>
-            <textarea name="text" id="text" placeholder="Enter your message" required
-               class="bg-gray paragraph color-white"></textarea>
-            <div>
-               <button type="submit" class="button-secondary paragraph">Send</button>
-            </div>
-         </div>
-      </form>
+<div class="prime-container padding-top-xxl padding-bot-xxl contact-container padding-left padding-right" id="contact">
+  <h1 class="color-secondary">Contact me.</h1>
+  <p class="color-white center">Get in touch via the form below or by emailing
+    <span class="color-secondary">sven.sonnborn@web.de</span>
+  </p>
+  <p class="color-light-gray center">Fields with * are required</p>
+  <div style="width: 100%;" *ngIf="!send">
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+      <div class="form-container">
+        <label for="name" class="padding-bot-s paragraph">Name</label>
+        <input type="text" placeholder="What is your Name? *" id="name" required [(ngModel)]="contact.name" name="name"
+          #name="ngModel" class="bg-gray paragraph color-white">
+        <label for="email" class="padding-bot-s padding-top-s paragraph">Email adress</label>
+        <input type="text" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+          placeholder="What is your Email Address? *" [(ngModel)]="contact.email" name="email" #email="ngModel" required
+          class="bg-gray paragraph color-white">
+        <label for="text" class="padding-bot-s padding-top-s paragraph">Message</label>
+        <textarea name="" required id="" rows="10" placeholder="What would you like to tell me? *" required
+          [(ngModel)]="contact.message" name="message" #message="ngModel"
+          class="bg-gray paragraph color-white"></textarea>
+        <div>
+          <button type="submit" class="button-secondary paragraph" [disabled]="!contactForm.form.valid">Send</button>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>

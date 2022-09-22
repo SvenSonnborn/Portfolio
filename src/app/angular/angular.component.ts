@@ -28,4 +28,5 @@ export class AngularComponent implements OnInit {
       text: 'Portfolio in angular with animations and in view directive',
     },
   ];
+
 }

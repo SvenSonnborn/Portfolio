@@ -1,0 +1,29 @@
+<header id="home">
+  <mat-sidenav-container (backdropClick)="close()">
+    <mat-sidenav (click)="close()" mode="over" [(opened)]="opened" position="end" opened class="navbarMobile" #sidenav
+      [autoFocus]="false">
+      <h1>Menu</h1>
+      <div class="menuList">
+        <a (click)="onClick('home')" (click)="close()" routerLink='' class="listItem">Home</a>
+        <a routerLink='' (click)="close()" (click)="onClick('about')" class="listItem">ABOUT</a>
+        <a routerLink='' (click)="close()" (click)="onClick('work')" class="listItem">WORK</a>
+        <a routerLink='' (click)="close()" (click)="onClick('contact')" class="listItem">CONTACT</a>
+        <a (click)="openCV()" class="cv">Open CV</a>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content class="padding-left padding-right">
+      <div class="logo">
+        <img routerLink='' (click)="onClick('home')" src="assets/img/logo_white.png">
+      </div>
+      <div class="navbar">
+        <a (click)="onClick('home')" routerLink='' class="color-secondary">HOME</a>
+        <a routerLink='' (click)="onClick('about')">ABOUT</a>
+        <a routerLink='' (click)="onClick('work')">WORK</a>
+      </div>
+      <div class="menu">
+        <img (click)="opened = !opened" src="./assets/img/menu.png">
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+</header>

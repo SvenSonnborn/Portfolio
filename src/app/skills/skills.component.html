@@ -1,4 +1,4 @@
-<div class="skill-complete bg-gray prime-container skills-tablet padding-top-xxl padding-bot-xxl" id="skills">
+<div class="skill-complete bg-gray prime-container skills-tablet padding-top-xxl padding-bot-xxl padding-left padding-right" id="skills">
    <h2 class="padding-bot-xl">MY Skills</h2>
    <div class="all-skills padding-top-xl">
       <div class="media-direction">
@@ -10,7 +10,7 @@
           -->
          <div *ngFor="let skill of skillsJSON" let i=" index" class="single-skill" appInView
             (visibilityChange)="handleViewChange($event)" #skill1
-            [ngClass]="inviewport.elementInViewport(skill1) ? skill.class : 'opa0'">
+            [ngClass]="inviewport.elementInViewport2(skill1) ? skill.class : 'opa0'">
             <div class="single-skill-upper">
                <img src="./assets/img/{{skill.Icon}}.png">
             </div>
